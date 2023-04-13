@@ -8,21 +8,21 @@ import java.util.ArrayList;
 
 public abstract class Bridge {
 
-  // shared vars
-  protected int currentTime;        // current time
-  protected ArrayList<Car> bridge;  // list of cars currently on bridge
-  protected boolean direction;      // current allowed flow of traffic
+    // shared vars
+    protected int currentTime;        // current time
+    protected ArrayList<Car> bridge;  // list of cars currently on bridge
+    protected boolean direction;      // current allowed flow of traffic
 
-  /*
-   * Inits a Bridge
-   */
-  public Bridge() {
-    currentTime = 0;
-    bridge = new ArrayList<>();
-    direction = true;
-  }
+    /*
+     * Inits a Bridge
+     */
+    public Bridge() {
+        currentTime = 0;
+        bridge = new ArrayList<>();
+        direction = true;
+    }
 
-  abstract public void arrive(Car car) throws InterruptedException;
+    abstract public void arrive(Car car) throws InterruptedException;
 
-  abstract public void exit(Car car) throws InterruptedException;
+    abstract public void exit(Car car) throws InterruptedException;
 }
